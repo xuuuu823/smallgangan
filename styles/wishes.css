@@ -1,0 +1,278 @@
+.wish-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.wish-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#wishInput {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.add-wish-btn {
+    padding: 1rem 2rem;
+    background: #ff9ecd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-wish-btn:hover {
+    background: #ff7eb8;
+    transform: scale(1.05);
+}
+
+.wishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.wish-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.wish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wish-card.completed {
+    background: #e8f5e9;
+}
+
+.wish-text {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.wish-date {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.complete-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+}
+
+.complete-btn.completed {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.wish-content {
+    position: relative;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+.close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-wish {
+    width: 100%;
+    padding: 1rem;
+    background: #ff9ecd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-wish:hover {
+    background: #ff7eb8;
+}
+
+.wish-status {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.completion-date {
+    display: block;
+    margin-top: 0.5rem;
+    color: #4caf50;
+}
+
+.wish-time {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* 成就栏样式 */
+.achievement-panel {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.achievement-bar {
+    width: 100%;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.achievement-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff9ecd, #ff7eb8);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* 奖励兑换券样式 */
+.reward-modal .modal-content {
+    text-align: center;
+}
+
+.reward-ticket {
+    background: linear-gradient(135deg, #ffd1dc, #ff9ecd);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.claim-btn {
+    padding: 1rem 2rem;
+    background: #ff7eb8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.claim-btn:hover {
+    background: #ff6ba9;
+    transform: scale(1.05);
+}
+
+/* 愿望完成样式 */
+.wish-complete {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.wish-complete button {
+    background: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: transparent;
+}
+
+.wish-complete button.completed {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.wish-content {
+    padding: 1rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: #ffebee;
+} 
+} 
