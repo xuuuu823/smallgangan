@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>许愿池</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/wishes.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-item">主页</a>
+            <a href="story.html" class="nav-item">我们的故事</a>
+            <a href="special-days.html" class="nav-item">特殊日子</a>
+            <a href="messages.html" class="nav-item">留言板</a>
+            <a href="wishes.html" class="nav-item active">许愿池</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="wish-container">
+            <h1>✨ 我的愿望清单 ✨</h1>
+            
+            <!-- 成就栏 -->
+            <div class="achievement-panel">
+                <h3>完成进度</h3>
+                <div class="achievement-bar">
+                    <div class="achievement-bar-fill"></div>
+                </div>
+                <div class="achievement-points">0%</div>
+            </div>
+            
+            <!-- 添加愿望表单 -->
+            <form id="wishForm" class="wish-form">
+                <input type="text" id="wishInput" placeholder="写下你的愿望..." required>
+                <button type="submit" class="add-wish-btn">添加愿望</button>
+            </form>
+
+            <!-- 愿望列表容器 -->
+            <div class="wishes-container"></div>
+        </div>
+    </main>
+
+    <script src="js/wishes.js"></script>
+</body>
+</html> 
